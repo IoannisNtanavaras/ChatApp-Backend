@@ -19,9 +19,7 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -39,11 +37,6 @@ using (var scope = app.Services.CreateScope())
     dbContext.Database.EnsureCreated(); // Δημιουργεί τη βάση αν δεν υπάρχει
 }
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
 
 app.UseHttpsRedirection();
 
