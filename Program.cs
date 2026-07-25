@@ -12,7 +12,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:3000") // Το URL του frontend
+            policy.WithOrigins("https://chat-chi-five-23.vercel.app/") // Το URL του frontend
                   .AllowAnyHeader()
                   .AllowAnyMethod()
                   .AllowCredentials(); // ΑΠΑΡΑΙΤΗΤΟ για SignalR
