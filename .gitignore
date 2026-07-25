@@ -1,0 +1,6 @@
+/bin/ 
+/obj/ 
+/publish/ 
+chat.db 
+/wwwroot/ 
+appsettings.Development.json 
